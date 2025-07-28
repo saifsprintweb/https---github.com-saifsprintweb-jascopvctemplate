@@ -442,9 +442,21 @@ Header Style
   z-index: 999;
 }
 
-.header-area .main-nav .nav li:last-child {
-  padding-right: 0px;
-}
+  .header-area .main-nav .nav li:last-child {
+    padding-right: 0px;
+  }
+  
+  /* Home page banner responsive adjustments */
+  .home-page .main-banner .item {
+    padding: 0px 10% 200px 10%;
+    min-height: 100vh;
+  }
+  
+  /* Home page header responsive adjustments */
+  .home-page .header-area {
+    position: absolute;
+    background-color: transparent;
+  }
 
 .header-area .main-nav .nav li {
   padding-left: 10px;
@@ -752,17 +764,41 @@ Banner Style
   margin-top: 0px;
 }
 
+/* Special styling for index.html page banner to fill header area */
+.home-page .main-banner .item {
+  padding: 0px 20% 320px 20%;
+  margin-top: 0px;
+  min-height: 100vh;
+}
+
+.home-page .main-banner .item-1 {
+  position: relative;
+  z-index: 5;
+  margin-top: 0px;
+  background-image: url(../images/banner-01.jpg);
+}
+
+/* Make header transparent on home page */
+.home-page .header-area {
+  position: absolute;
+  background-color: transparent;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.home-page .header-area .main-nav .nav li a {
+  color: #fff;
+}
+
+.home-page .header-area .main-nav .logo h1 {
+  color: #fff;
+}
 
 .header-area {
   position: relative;
   z-index: 10;
-}
-
-.main-banner .item-1 {
-	position: relative;
-  z-index: 5; /* lower than header */
-  margin-top: -100px; /* adjust this to control how much it overlaps */
-  background-image: url(../images/banner-01.jpg);
 }
 
 .main-banner .item-2 {
@@ -1777,6 +1813,18 @@ body {
   }
   .main-banner .item h2 {
     width: 100%;
+  }
+  
+  /* Home page banner tablet adjustments */
+  .home-page .main-banner .item {
+    padding: 0px 15% 250px 15%;
+    min-height: 100vh;
+  }
+  
+  /* Home page header tablet adjustments */
+  .home-page .header-area {
+    position: absolute;
+    background-color: transparent;
   }
   .featured .section-heading {
     margin-left: 0px;
