@@ -8,17 +8,55 @@
         $('#js-preloader').addClass('loaded');
 
     });
+    
+    // Initial header state check for home page
+    $(document).ready(function() {
+        if ($('body').hasClass('home-page')) {
+            var scroll = $(window).scrollTop();
+            var header = $('header').height();
+            var videoBanner = $('.main-banner').height();
+            
+            if (scroll >= videoBanner - header) {
+                $("header").addClass("background-header");
+                $(".header-area .main-nav .nav li a").css("color", "#1e1e1e");
+                $(".header-area .main-nav .logo h1").css("color", "#1e1e1e");
+            } else {
+                $("header").removeClass("background-header");
+                $(".header-area .main-nav .nav li a").css("color", "#fff");
+                $(".header-area .main-nav .logo h1").css("color", "#fff");
+            }
+        }
+    });
 
 
 	$(window).scroll(function() {
 	  var scroll = $(window).scrollTop();
-	  var box = $('.header-text').height();
 	  var header = $('header').height();
-
-	  if (scroll >= box - header) {
-	    $("header").addClass("background-header");
+	  
+	  // Check if we're on the home page
+	  if ($('body').hasClass('home-page')) {
+	    // For home page, check if we've scrolled past the video banner
+	    var videoBanner = $('.main-banner').height();
+	    
+	    if (scroll >= videoBanner - header) {
+	      $("header").addClass("background-header");
+	      // Change text colors back to dark for better visibility on white background
+	      $(".header-area .main-nav .nav li a").css("color", "#1e1e1e");
+	      $(".header-area .main-nav .logo h1").css("color", "#1e1e1e");
+	    } else {
+	      $("header").removeClass("background-header");
+	      // Change text colors back to white for visibility on video background
+	      $(".header-area .main-nav .nav li a").css("color", "#fff");
+	      $(".header-area .main-nav .logo h1").css("color", "#fff");
+	    }
 	  } else {
-	    $("header").removeClass("background-header");
+	    // For other pages, use the original logic
+	    var box = $('.header-text').height();
+	    if (scroll >= box - header) {
+	      $("header").addClass("background-header");
+	    } else {
+	      $("header").removeClass("background-header");
+	    }
 	  }
 	})
 
