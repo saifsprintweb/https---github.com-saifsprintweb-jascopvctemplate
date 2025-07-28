@@ -16,15 +16,15 @@
             var header = $('header').height();
             var videoBanner = $('.main-banner').height();
             
-            if (scroll >= videoBanner - header) {
-                $("header").addClass("background-header");
-                $(".header-area .main-nav .nav li a").css("color", "#1e1e1e");
-                $(".header-area .main-nav .logo h1").css("color", "#1e1e1e");
-            } else {
-                $("header").removeClass("background-header");
-                $(".header-area .main-nav .nav li a").css("color", "#fff");
-                $(".header-area .main-nav .logo h1").css("color", "#fff");
-            }
+                         if (scroll >= videoBanner - header) {
+                 $("header").addClass("background-header");
+                 $(".header-area .main-nav .nav li a").css("color", "#000000");
+                 $(".header-area .main-nav .logo h1").css("color", "#000000");
+             } else {
+                 $("header").removeClass("background-header");
+                 $(".header-area .main-nav .nav li a").css("color", "#fff");
+                 $(".header-area .main-nav .logo h1").css("color", "#fff");
+             }
         }
     });
 
@@ -40,9 +40,9 @@
 	    
 	    if (scroll >= videoBanner - header) {
 	      $("header").addClass("background-header");
-	      // Change text colors back to dark for better visibility on white background
-	      $(".header-area .main-nav .nav li a").css("color", "#1e1e1e");
-	      $(".header-area .main-nav .logo h1").css("color", "#1e1e1e");
+	            // Change text colors back to dark for better visibility on white background
+      $(".header-area .main-nav .nav li a").css("color", "#000000");
+      $(".header-area .main-nav .logo h1").css("color", "#000000");
 	    } else {
 	      $("header").removeClass("background-header");
 	      // Change text colors back to white for visibility on video background

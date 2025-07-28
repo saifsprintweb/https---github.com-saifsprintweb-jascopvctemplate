@@ -88,7 +88,7 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #1e1e1e;
+  color: #000000;
   margin-top: 0px;
   margin-bottom: 0px;
   font-weight: 700;
@@ -101,7 +101,7 @@ ul {
 p {
   font-size: 14px;
   line-height: 28px;
-  color: #4a4a4a;
+  color: #000000;
 }
 
 img {
@@ -120,12 +120,12 @@ body {
 }
 
 ::selection {
-  background: #0071f8;
+  background: #B1181E;
   color: #fff;
 }
 
 ::-moz-selection {
-  background: #0071f8;
+  background: #B1181E;
   color: #fff;
 }
 
@@ -147,11 +147,11 @@ body {
 
 .section-heading h2 em {
   font-style: normal;
-  color: #0071f8;
+  color: #B1181E;
 }
 
 .section-heading h6 {
-  color: #ee626b;
+  color: #B1181E;
   font-size: 15px;
   text-transform: uppercase;
   font-weight: 700;
@@ -159,7 +159,7 @@ body {
 
 .icon-button a {
   display: inline-block;
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: #fff;
   font-size: 14px;
   font-weight: 400;
@@ -171,7 +171,7 @@ body {
 }
 
 .icon-button a i {
-  background-color: #f35525;
+  background-color: #B1181E;
   height: 50px;
   width: 50px;
   text-align: center;
@@ -183,7 +183,7 @@ body {
 }
 
 .icon-button a:hover {
-  color: #f35525;
+  color: #B1181E;
 }
 
 .icon-button a:hover i {
@@ -192,7 +192,7 @@ body {
 
 .main-button a {
   display: inline-block;
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: #fff;
   font-size: 14px;
   font-weight: 500;
@@ -204,7 +204,7 @@ body {
 }
 
 .main-button a:hover {
-  background-color: #f35525;
+  background-color: #B1181E;
   color: #fff;
 }
 
@@ -281,7 +281,7 @@ Pre-loader Style
   height: 16px;
   top: 12px;
   left: 15px;
-  background: #f35525;
+  background: #B1181E;
   border-radius: 50%;
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -304,7 +304,7 @@ Pre-loader Style
   width: 16px;
   height: 16px;
   margin-left: 16px;
-  background: #f35525;
+  background: #B1181E;
   border-radius: 50%;
 }
 
@@ -348,7 +348,7 @@ Header Style
 }
 
 .sub-header ul.social-links li a:hover {
-  background-color: #f35525;
+  background-color: #B1181E;
 }
 
 .sub-header ul.info li {
@@ -367,7 +367,7 @@ Header Style
 
 .sub-header ul.info li i {
   font-size: 20px;
-  color: #f35525;
+  color: #B1181E;
   margin-right: 8px;
 }
 
@@ -421,7 +421,7 @@ Header Style
   line-height: 100px;
   font-size: 28px;
   text-transform: uppercase;
-  color: #1e1e1e;
+  color: #000000;
   font-weight: 700;
   letter-spacing: 2px;
 }
@@ -468,7 +468,7 @@ Header Style
 
   /* Fix mobile navigation text color on home page */
   .home-page .header-area .main-nav .nav li a {
-    color: #1e1e1e !important;
+    color: #000000 !important;
   }
 
 .header-area .main-nav .nav li {
@@ -487,7 +487,7 @@ Header Style
   height: 40px;
   line-height: 40px;
   text-transform: capitalize;
-  color: #1e1e1e;
+  color: #000000;
   -webkit-transition: all 0.4s ease 0s;
   -moz-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
@@ -499,16 +499,16 @@ Header Style
 /* Removed special styling for last nav item since "Schedule a visit" is commented out */
 
 .header-area .main-nav .nav li:hover a {
-  color: #f35525;
+  color: #B1181E;
 }
 
 .header-area .main-nav .nav li a.active {
-  color: #f35525;
+  color: #B1181E;
 }
 
 
 .background-header .main-nav .nav li a.active {
-  color: #f35525;
+  color: #B1181E;
 }
 
 .header-area .main-nav .menu-trigger {
@@ -538,7 +538,7 @@ Header Style
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: #000000;
   display: block;
   position: absolute;
   width: 30px;
@@ -552,7 +552,7 @@ Header Style
   -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
-  background-color: #1e1e1e;
+  background-color: #000000;
   display: block;
   position: absolute;
   width: 30px;
@@ -599,11 +599,11 @@ Header Style
   -ms-transform: translateY(6px) translateX(1px) rotate(45deg);
   -webkit-transform: translateY(6px) translateX(1px) rotate(45deg);
   transform: translateY(6px) translateX(1px) rotate(45deg);
-  background-color: #1e1e1e;
+  background-color: #000000;
 }
 
 .background-header .main-nav .menu-trigger.active span:before {
-  background-color: #1e1e1e;
+  background-color: #000000;
 }
 
 .header-area .main-nav .menu-trigger.active span:after {
@@ -611,11 +611,11 @@ Header Style
   -ms-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   -webkit-transform: translateY(-6px) translateX(1px) rotate(-45deg);
   transform: translateY(-6px) translateX(1px) rotate(-45deg);
-  background-color: #1e1e1e;
+  background-color: #000000;
 }
 
 .background-header .main-nav .menu-trigger.active span:after {
-  background-color: #1e1e1e;
+  background-color: #000000;
 }
 
 .visible{
@@ -645,7 +645,7 @@ Header Style
     line-height: 50px;
     height: 50px;
     font-weight: 400;
-    color: #1e1e1e;
+    color: #000000;
     background-color: #fff;
      border-radius: 0px 0px 25px 25px;
   }
@@ -678,7 +678,7 @@ Header Style
   }
   .header-area.header-sticky .nav li a:hover,
   .header-area.header-sticky .nav li a.active {
-    color: #ee626b!important;
+    color: #B1181E!important;
     opacity: 1;
   }
   .header-area.header-sticky .nav li.search-icon a {
@@ -819,11 +819,11 @@ Banner Style
 }
 
 .home-page .background-header .main-nav .nav li a {
-  color: #1e1e1e !important;
+  color: #000000 !important;
 }
 
 .home-page .background-header .main-nav .logo h1 {
-  color: #1e1e1e !important;
+  color: #000000 !important;
 }
 
 .header-area {
@@ -852,7 +852,7 @@ Banner Style
 
 .main-banner .item span.category em {
   font-style: normal;
-  color: #f35525;
+  color: #B1181E;
 }
 
 .main-banner .item h2 {
@@ -881,7 +881,7 @@ Banner Style
 }
 
 .main-banner .owl-dots .active {
-  background-color: #f35525;
+  background-color: #B1181E;
 }
 
 .main-banner .owl-nav {
@@ -942,7 +942,7 @@ Featured Style
   width: 110px;
   height: 110px;
   line-height: 110px;
-  background-color: #f35525;
+  background-color: #B1181E;
   border-radius: 50%;
   text-align: center;
   position: absolute;
@@ -978,11 +978,11 @@ Featured Style
   box-shadow: none;
   font-size: 17px;
   font-weight: 500;
-  color: #1e1e1e;
+  color: #000000;
 }
 
 .featured .accordion-button:not(.collapsed) {
-  color: #f35525;
+  color: #B1181E;
   background-color: #fafafa;
   outline: none;
 }
@@ -1079,8 +1079,8 @@ Video Style
   display: inline-block;
   text-align: center;
   line-height: 52px;
-  color: #f35525;
-  outline: 15px solid rgba(254, 85, 37, 0.5);
+  color: #B1181E;
+  outline: 15px solid rgba(177, 24, 30, 0.5);
   font-size: 18px;
 }
 
@@ -1113,7 +1113,7 @@ Fun Facts Style
 .fun-facts .counter p {
   text-align: left;
   font-size: 16px;
-  color: #1e1e1e;
+  color: #000000;
   font-weight: 600;
   line-height: 28px;
 }
@@ -1121,14 +1121,14 @@ Fun Facts Style
 .fun-facts .counter h2 {
   margin-right: 25px;
   font-size: 40px;
-  color: #f35525;
+  color: #B1181E;
 }
 
 .fun-facts .counter:after {
   position: absolute;
   width: 50px;
   height: 50px;
-  background-color: #f35525;
+  background-color: #B1181E;
   border-radius: 50%;
   content: '';
   right: -25px;
@@ -1154,7 +1154,7 @@ Best Deal Style
 .best-deal .tabs-content .nav-link {
   font-size: 16px;
   font-weight: 500;
-  background-color: #1e1e1e !important;
+  background-color: #000000 !important;
   border-radius: 5px;
   height: 50px;
   line-height: 50px;
@@ -1164,7 +1164,7 @@ Best Deal Style
 }
 
 .best-deal .tabs-content .nav-tabs .nav-link.active {
-  background-color: #f35525 !important;
+  background-color: #B1181E !important;
   color: #fff;
 }
 
@@ -1207,7 +1207,7 @@ Best Deal Style
 
 .best-deal .info-table ul li span {
   font-size: 20px;
-  color: #1e1e1e;
+  color: #000000;
   font-weight: 700;
   float: right;
   display: inline-block;
@@ -1251,7 +1251,7 @@ Properties Style
   font-weight: 500;
   border-radius: 5px;
   font-size: 14px;
-  color: #1e1e1e;
+  color: #000000;
   padding: 5px 12px;
   display: inline-block;
   margin-top: 25px;
@@ -1263,19 +1263,19 @@ Properties Style
 }
 
 .properties .item h4 a {
-  color: #1e1e1e;
+  color: #000000;
 }
 
 .properties .item ul li {
   display: inline-block;
   font-size: 15px;
-  color: #4a4a4a;
+  color: #000000;
   margin-right: 20px;
 }
 
 .properties .item ul li span {
   font-weight: 600;
-  color: #1e1e1e;
+  color: #000000;
 }
 
 .properties .item ul {
@@ -1286,7 +1286,7 @@ Properties Style
 
 .properties .item h6 {
   font-size: 20px;
-  color: #f35525;
+  color: #B1181E;
   margin-top: 6px;
   display: inline-block;
   float: right;
@@ -1371,7 +1371,7 @@ Contact Style
 
 .contact-content #contact-form label {
   font-size: 15px;
-  color: #3a3a3a;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1399,7 +1399,7 @@ Contact Style
 }
 
 .contact-content #contact-form button {
-  background-color: #1e1e1e;
+  background-color: #000000;
   height: 44px;
   border-radius: 22px;
   padding: 0px 20px;
@@ -1411,7 +1411,7 @@ Contact Style
 }
 
 .contact-content #contact-form button:hover {
-  background-color: #f35525;
+  background-color: #B1181E;
 }
 
 
@@ -1427,7 +1427,7 @@ footer.footer-no-gap {
 
 footer {
   margin-top: 150px;
-  background-color: #1e1e1e;
+  background-color: #000000;
   min-height: 100px;
 }
 
@@ -1468,7 +1468,7 @@ Page Header Style
 
 .page-heading span {
   background-color: #fff;
-  color: #1e1e1e;
+  color: #000000;
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
@@ -1478,7 +1478,7 @@ Page Header Style
 }
 
 .page-heading span a {
-  color: #1e1e1e;
+  color: #000000;
 }
 
 .page-heading h3 {
@@ -1513,14 +1513,14 @@ Properties Style
   text-transform: capitalize;
   font-weight: 500;
   color: #fff;
-  background-color: #1e1e1e;
+  background-color: #000000;
   padding: 12px 25px;
   border-radius: 5px;
   transition: all .3s;
 }
 
 .properties ul.properties-filter li a.is_active {
-  background-color: #f35525;
+  background-color: #B1181E;
   color: #fff;
 }
 
@@ -1529,7 +1529,7 @@ Properties Style
 }
 
 .properties ul.properties-filter li a:hover {
-  color: #f35525;
+  color: #B1181E;
 }
 
 .properties ul.pagination {
@@ -1550,7 +1550,7 @@ Properties Style
   height: 40px;
   line-height: 40px;
   text-align: center;
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: #fff;
   font-size: 15px;
   font-weight: 600;
@@ -1560,7 +1560,7 @@ Properties Style
 
 .properties ul.pagination li a:hover,
 .properties ul.pagination li a.is_active {
-  background-color: #f35525;
+  background-color: #B1181E;
   color: #fff;
 }
 
@@ -1588,7 +1588,7 @@ Single Page Style
   font-weight: 500;
   border-radius: 5px;
   font-size: 14px;
-  color: #1e1e1e;
+  color: #000000;
   padding: 5px 12px;
   display: inline-block;
   margin-top: 40px;
@@ -1613,11 +1613,11 @@ Single Page Style
   box-shadow: none;
   font-size: 17px;
   font-weight: 500;
-  color: #1e1e1e;
+  color: #000000;
 }
 
 .single-property .accordion-button:not(.collapsed) {
-  color: #f35525;
+  color: #B1181E;
   background-color: #fafafa;
   outline: none;
 }
@@ -1731,7 +1731,7 @@ Contact Page Style
 
 .contact-page #contact-form label {
   font-size: 15px;
-  color: #3a3a3a;
+  color: #000000;
   margin-bottom: 15px;
 }
 
@@ -1759,7 +1759,7 @@ Contact Page Style
 }
 
 .contact-page #contact-form button {
-  background-color: #1e1e1e;
+  background-color: #000000;
   height: 44px;
   border-radius: 22px;
   padding: 0px 20px;
@@ -1771,7 +1771,7 @@ Contact Page Style
 }
 
 .contact-page #contact-form button:hover {
-  background-color: #f35525;
+  background-color: #B1181E;
 }
 
 
@@ -1865,7 +1865,7 @@ body {
 
   /* Fix mobile navigation text color on home page for tablet */
   .home-page .header-area .main-nav .nav li a {
-    color: #1e1e1e !important;
+    color: #000000 !important;
   }
   .featured .section-heading {
     margin-left: 0px;
