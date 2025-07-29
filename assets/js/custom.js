@@ -177,6 +177,19 @@
 				featuredText.addClass('animate');
 			}
 		}
+		
+		// Video section scroll animations
+		var videoFrame = $('.video-content .video-frame');
+		
+		if (videoFrame.length) {
+			var videoSectionTop = $('.video-content').offset().top;
+			var windowHeight = $(window).height();
+			
+			// Check if the video section is in view
+			if (scroll + windowHeight > videoSectionTop + 100) {
+				videoFrame.addClass('animate');
+			}
+		}
 	});
 
 	// Trigger animation on page load if section is already visible
@@ -193,6 +206,20 @@
 				setTimeout(function() {
 					featuredImage.addClass('animate');
 					featuredText.addClass('animate');
+				}, 500);
+			}
+		}
+		
+		// Video section animation on page load
+		var videoFrame = $('.video-content .video-frame');
+		
+		if (videoFrame.length) {
+			var videoSectionTop = $('.video-content').offset().top;
+			var windowHeight = $(window).height();
+			
+			if (videoSectionTop < windowHeight) {
+				setTimeout(function() {
+					videoFrame.addClass('animate');
 				}, 500);
 			}
 		}
