@@ -158,7 +158,45 @@
 			}, 300);
 		});
 	});
-    
+
+	// Featured section scroll animations
+	$(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		var featuredSection = $('.featured');
+		var featuredImage = $('.featured .left-image img');
+		var featuredText = $('.featured .section-heading');
+		
+		if (featuredSection.length) {
+			var sectionTop = featuredSection.offset().top;
+			var sectionHeight = featuredSection.height();
+			var windowHeight = $(window).height();
+			
+			// Check if the featured section is in view
+			if (scroll + windowHeight > sectionTop + 100 && scroll < sectionTop + sectionHeight) {
+				featuredImage.addClass('animate');
+				featuredText.addClass('animate');
+			}
+		}
+	});
+
+	// Trigger animation on page load if section is already visible
+	$(document).ready(function() {
+		var featuredSection = $('.featured');
+		var featuredImage = $('.featured .left-image img');
+		var featuredText = $('.featured .section-heading');
+		
+		if (featuredSection.length) {
+			var sectionTop = featuredSection.offset().top;
+			var windowHeight = $(window).height();
+			
+			if (sectionTop < windowHeight) {
+				setTimeout(function() {
+					featuredImage.addClass('animate');
+					featuredText.addClass('animate');
+				}, 500);
+			}
+		}
+	});
 
 
 })(window.jQuery);
