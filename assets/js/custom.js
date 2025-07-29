@@ -190,6 +190,29 @@
 				videoFrame.addClass('animate');
 			}
 		}
+		
+		// Products section scroll animations
+		var productCircles = $('.animate-product');
+		
+		if (productCircles.length) {
+			var productsSection = $('#products-section');
+			var productsSectionTop = productsSection.offset().top;
+			var productsSectionHeight = productsSection.height();
+			var windowHeight = $(window).height();
+			
+			// Check if the products section is actually in view
+			if (scroll + windowHeight > productsSectionTop + 150 && scroll < productsSectionTop + productsSectionHeight - 100) {
+				productCircles.each(function(index) {
+					var $this = $(this);
+					if (!$this.hasClass('animated')) {
+						setTimeout(function() {
+							$this.css('animation-delay', (index * 0.8) + 's');
+							$this.addClass('animate animated');
+						}, index * 800);
+					}
+				});
+			}
+		}
 	});
 
 	// Trigger animation on page load if section is already visible
@@ -220,6 +243,30 @@
 			if (videoSectionTop < windowHeight) {
 				setTimeout(function() {
 					videoFrame.addClass('animate');
+				}, 500);
+			}
+		}
+		
+		// Products section animation on page load
+		var productCircles = $('.animate-product');
+		
+		if (productCircles.length) {
+			var productsSection = $('#products-section');
+			var productsSectionTop = productsSection.offset().top;
+			var windowHeight = $(window).height();
+			
+			// Only animate if the products section is significantly visible
+			if (productsSectionTop < windowHeight - 200) {
+				setTimeout(function() {
+					productCircles.each(function(index) {
+						var $this = $(this);
+						if (!$this.hasClass('animated')) {
+							setTimeout(function() {
+								$this.css('animation-delay', (index * 0.8) + 's');
+								$this.addClass('animate animated');
+							}, index * 800);
+						}
+					});
 				}, 500);
 			}
 		}
