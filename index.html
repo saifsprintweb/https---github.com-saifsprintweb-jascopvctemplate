@@ -125,9 +125,20 @@
          transform: translateY(0);
        }
        
-       .fade-in-sentence {
-         transform: translateY(30px);
-       }
+               .fade-in-sentence {
+          transform: translateY(30px);
+        }
+        
+        /* Certification images slide-in animations */
+        .cert-image-container.animate {
+          opacity: 1 !important;
+          transform: translateX(0) translateY(0) !important;
+        }
+        
+        .cert-image-container:hover {
+          transform: scale(1.05) !important;
+          transition: all 0.3s ease;
+        }
     </style>
 <!--
 
@@ -505,7 +516,7 @@ https://templatemo.com/tm-591-villa-agency
             </div>
           </div>     
         </div>
-                                   <div class="row">
+        <div class="row">
             <div class="col-lg-12">
               <div class="quality-content-cards">
                 <div class="row">
@@ -532,7 +543,45 @@ https://templatemo.com/tm-591-villa-agency
           </div>
       </div>
     </div>
-
+         <div class="section best-deal">
+       <div class="container">
+         <div class="row">
+           <div class="col-lg-12">
+             <div class="section-heading">
+               <h4 style="color: #000000;text-align: center;">* JASCO UPVC and CPVC pipes and fittings are manufactured in accordance with international standards:</h4>
+             </div>
+           </div>     
+         </div>
+         <div class="row" style="margin-top: 40px;">
+           <div class="col-lg-12">
+             <div class="certification-images">
+               <div class="row justify-content-center">
+                                   <div class="col-lg-3 col-md-6 col-sm-6 mb-4 text-center">
+                    <div class="cert-image-container slide-in-left" style="opacity: 0; transform: translateX(-50px); transition: all 0.8s ease;">
+                      <img src="assets/images/ASTM-PNG.png" alt="ASTM Certification" style="max-width: 50%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 mb-4 text-center">
+                    <div class="cert-image-container slide-in-bottom" style="opacity: 0; transform: translateY(50px); transition: all 0.8s ease;">
+                      <img src="assets/images/din.png" alt="DIN Certification" style="max-width: 50%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 mb-4 text-center">
+                    <div class="cert-image-container slide-in-top" style="opacity: 0; transform: translateY(-50px); transition: all 0.8s ease;">
+                      <img src="assets/images/SASO-1.png" alt="SASO Certification" style="max-width: 50%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 mb-4 text-center">
+                    <div class="cert-image-container slide-in-right" style="opacity: 0; transform: translateX(50px); transition: all 0.8s ease;">
+                      <img src="assets/images/iso-logo-1536x1366.png" alt="ISO Certification" style="max-width: 50%; height: auto; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                    </div>
+                  </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
 
 
   <div class="contact section">
@@ -628,32 +677,53 @@ https://templatemo.com/tm-591-villa-agency
      <script src="assets/js/counter.js"></script>
    <script src="assets/js/custom.js"></script>
 
-   <script>
-     // Scroll-triggered animations for Quality Assurance section
-     document.addEventListener('DOMContentLoaded', function() {
-       const sentences = document.querySelectorAll('.fade-in-sentence');
-       
-       // Create intersection observer
-       const observer = new IntersectionObserver((entries) => {
-         entries.forEach((entry, index) => {
-           if (entry.isIntersecting) {
-             // Add animation class with staggered delay
-             setTimeout(() => {
-               entry.target.classList.add('animate');
-             }, index * 200); // 200ms delay between each sentence
-           }
-         });
-       }, {
-         threshold: 0.3, // Trigger when 30% of the element is visible
-         rootMargin: '0px 0px -50px 0px' // Trigger slightly before the element comes into view
-       });
-       
-       // Observe each sentence
-       sentences.forEach(sentence => {
-         observer.observe(sentence);
-       });
-     });
-   </script>
+       <script>
+      // Scroll-triggered animations for Quality Assurance section
+      document.addEventListener('DOMContentLoaded', function() {
+        const sentences = document.querySelectorAll('.fade-in-sentence');
+        const certImages = document.querySelectorAll('.cert-image-container');
+        
+        // Create intersection observer for sentences
+        const sentenceObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              // Add animation class with staggered delay
+              setTimeout(() => {
+                entry.target.classList.add('animate');
+              }, index * 200); // 200ms delay between each sentence
+            }
+          });
+        }, {
+          threshold: 0.3, // Trigger when 30% of the element is visible
+          rootMargin: '0px 0px -50px 0px' // Trigger slightly before the element comes into view
+        });
+        
+        // Create intersection observer for certification images
+        const imageObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry, index) => {
+            if (entry.isIntersecting) {
+              // Add animation class with staggered delay
+              setTimeout(() => {
+                entry.target.classList.add('animate');
+              }, index * 300); // 300ms delay between each image
+            }
+          });
+        }, {
+          threshold: 0.3, // Trigger when 30% of the element is visible
+          rootMargin: '0px 0px -50px 0px' // Trigger slightly before the element comes into view
+        });
+        
+        // Observe each sentence
+        sentences.forEach(sentence => {
+          sentenceObserver.observe(sentence);
+        });
+        
+        // Observe each certification image
+        certImages.forEach(image => {
+          imageObserver.observe(image);
+        });
+      });
+    </script>
 
    </body>
 </html>
