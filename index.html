@@ -37,7 +37,97 @@
       .best-deal {
         background-color: #fafafa;
         padding: 30px;
+        margin-top: 50px;
       }
+      
+      /* Mobile-friendly tab styling */
+      @media (max-width: 768px) {
+        .nav-tabs {
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+        
+        .nav-tabs .nav-item {
+          flex: 1 1 calc(50% - 5px);
+          min-width: 140px;
+        }
+        
+        .nav-tabs .nav-link {
+          font-size: 12px;
+          padding: 8px 12px;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
+        .tabs-content {
+          margin-top: 20px;
+        }
+        
+        .tab-content .row {
+          flex-direction: column;
+        }
+        
+        .tab-content .col-lg-6 {
+          margin-bottom: 20px;
+        }
+        
+        .tab-content h2 {
+          font-size: 18px;
+          margin-bottom: 15px;
+        }
+        
+        .card {
+          margin-top: 15px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        .nav-tabs .nav-item {
+          flex: 1 1 100%;
+        }
+        
+        .nav-tabs .nav-link {
+          font-size: 11px;
+          padding: 10px 8px;
+        }
+        
+        .best-deal {
+          padding: 20px 15px;
+        }
+      }
+      
+             /* Quality Assurance fade-in animation */
+       @keyframes fadeInUp {
+         from {
+           opacity: 0;
+           transform: translateY(30px);
+         }
+         to {
+           opacity: 1;
+           transform: translateY(0);
+         }
+       }
+       
+       .quality-point {
+         transition: all 0.3s ease;
+       }
+       
+       .quality-point:hover {
+         transform: translateX(10px);
+         color: #B1181E;
+       }
+       
+       /* Scroll-triggered animation classes */
+       .fade-in-sentence.animate {
+         opacity: 1 !important;
+         transform: translateY(0);
+       }
+       
+       .fade-in-sentence {
+         transform: translateY(30px);
+       }
     </style>
 <!--
 
@@ -271,9 +361,9 @@ https://templatemo.com/tm-591-villa-agency
     <div class="section best-deal">
       <div class="container">
         <div class="row">
-          <div class="col-lg-6">
+          <div class="col-lg-12">
             <div class="section-heading">
-              <h2 style="color: #B1181E;"> TECHNICAL FEATURES</h2>
+              <h2 style="color: #B1181E;text-align: center;">| TECHNICAL FEATURES</h2>
             </div>
           </div>     
         </div>
@@ -406,130 +496,44 @@ https://templatemo.com/tm-591-villa-agency
         </div>
       </div>
     </div>
-  
-
-  <div class="properties section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-4 offset-lg-4">
-          <div class="section-heading text-center">
-            <h6>| Properties</h6>
-            <h2>We Provide The Best Property You Like</h2>
-          </div>
+    <div class="section best-deal">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="section-heading">
+              <h2 style="color: #B1181E;text-align: center;">| QUALITY ASSURANCE</h2>
+            </div>
+          </div>     
         </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-01.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$2.264.000</h6>
-            <h4><a href="property-details.html">18 New Street Miami, OR 97219</a></h4>
-            <ul>
-              <li>Bedrooms: <span>8</span></li>
-              <li>Bathrooms: <span>8</span></li>
-              <li>Area: <span>545m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>6 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
+                                   <div class="row">
+            <div class="col-lg-12">
+              <div class="quality-content-cards">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <div class="card shadow-sm" style="border: none; border-radius: 15px; padding: 25px; background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%); margin-bottom: 20px;">
+                      <div class="card-body">
+                                                 <p class="fade-in-sentence" style="line-height: 1.8; margin-bottom: 20px; opacity: 0; transition: all 0.6s ease;">Al Jazera Company for Plastic industry ( <span style="color: #B1181E; font-weight: bold;">JASCO PVC</span> ) always focused on quality, to remain top quality manufacturer <span style="color: #B1181E; font-weight: bold;">JASCO PVC</span> adopt Quality Management System that keep us to improve our overall performance and provide a sound basis for sustainable development initiatives.</p>
+                         
+                         <p class="fade-in-sentence" style="line-height: 1.8; margin-bottom: 20px; opacity: 0; transition: all 0.6s ease;">The potential benefits of implementing a Quality Management System based on this International Standard are:</p>
+                         
+                         <p class="fade-in-sentence" style="line-height: 1.8; margin-bottom: 15px; opacity: 0; transition: all 0.6s ease;">The ability to consistently provide products and services that meet customer and applicable statutory and regulatory requirements.</p>
+                         
+                         <p class="fade-in-sentence" style="line-height: 1.8; margin-bottom: 15px; opacity: 0; transition: all 0.6s ease;">Facilitating opportunities to enhance customer satisfaction.</p>
+                         
+                         <p class="fade-in-sentence" style="line-height: 1.8; margin-bottom: 15px; opacity: 0; transition: all 0.6s ease;">Addressing risks and opportunities associated with its context and objectives.</p>
+                         
+                         <p class="fade-in-sentence" style="line-height: 1.8; margin-bottom: 0; opacity: 0; transition: all 0.6s ease;">The ability to demonstrate conformity to specified Quality Management System requirements.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-02.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.180.000</h6>
-            <h4><a href="property-details.html">54 Mid Street Florida, OR 27001</a></h4>
-            <ul>
-              <li>Bedrooms: <span>6</span></li>
-              <li>Bathrooms: <span>5</span></li>
-              <li>Area: <span>450m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>8 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-03.jpg" alt=""></a>
-            <span class="category">Luxury Villa</span>
-            <h6>$1.460.000</h6>
-            <h4><a href="property-details.html">26 Old Street Miami, OR 38540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>5</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>225m2</span></li>
-              <li>Floor: <span>3</span></li>
-              <li>Parking: <span>10 spots</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-04.jpg" alt=""></a>
-            <span class="category">Apartment</span>
-            <h6>$584.500</h6>
-            <h4><a href="property-details.html">12 New Street Miami, OR 12650</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>3</span></li>
-              <li>Area: <span>125m2</span></li>
-              <li>Floor: <span>25th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-05.jpg" alt=""></a>
-            <span class="category">Penthouse</span>
-            <h6>$925.600</h6>
-            <h4><a href="property-details.html">34 Beach Street Miami, OR 42680</a></h4>
-            <ul>
-              <li>Bedrooms: <span>4</span></li>
-              <li>Bathrooms: <span>4</span></li>
-              <li>Area: <span>180m2</span></li>
-              <li>Floor: <span>38th</span></li>
-              <li>Parking: <span>2 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="item">
-            <a href="property-details.html"><img src="assets/images/property-06.jpg" alt=""></a>
-            <span class="category">Modern Condo</span>
-            <h6>$450.000</h6>
-            <h4><a href="property-details.html">22 New Street Portland, OR 16540</a></h4>
-            <ul>
-              <li>Bedrooms: <span>3</span></li>
-              <li>Bathrooms: <span>2</span></li>
-              <li>Area: <span>165m2</span></li>
-              <li>Floor: <span>26th</span></li>
-              <li>Parking: <span>3 cars</span></li>
-            </ul>
-            <div class="main-button">
-              <a href="property-details.html">Schedule a visit</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
-  </div>
+
+
 
   <div class="contact section">
     <div class="container">
@@ -621,8 +625,35 @@ https://templatemo.com/tm-591-villa-agency
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/counter.js"></script>
-  <script src="assets/js/custom.js"></script>
+     <script src="assets/js/counter.js"></script>
+   <script src="assets/js/custom.js"></script>
 
-  </body>
+   <script>
+     // Scroll-triggered animations for Quality Assurance section
+     document.addEventListener('DOMContentLoaded', function() {
+       const sentences = document.querySelectorAll('.fade-in-sentence');
+       
+       // Create intersection observer
+       const observer = new IntersectionObserver((entries) => {
+         entries.forEach((entry, index) => {
+           if (entry.isIntersecting) {
+             // Add animation class with staggered delay
+             setTimeout(() => {
+               entry.target.classList.add('animate');
+             }, index * 200); // 200ms delay between each sentence
+           }
+         });
+       }, {
+         threshold: 0.3, // Trigger when 30% of the element is visible
+         rootMargin: '0px 0px -50px 0px' // Trigger slightly before the element comes into view
+       });
+       
+       // Observe each sentence
+       sentences.forEach(sentence => {
+         observer.observe(sentence);
+       });
+     });
+   </script>
+
+   </body>
 </html>
