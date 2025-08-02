@@ -77,9 +77,12 @@ https://templatemo.com/tm-591-villa-agency
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
                       <li><a href="index.html">Home</a></li>
-                      <li><a href="properties.html" class="active">Properties</a></li>
-                      <li><a href="property-details.html">Property Details</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="#about-us">About Us</a></li>
+                      <li><a href="products.html" class="active">Products</a></li>
+                      <li><a href="#downloads">Downloads</a></li>
+                      <li><a href="#certificates">Certificates</a></li>
+                      <li><a href="#sister-companies">Sister Companies</a></li>
+                      <li><a href="#contact-us">Contact Us</a></li>
                       <!--<li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>-->
                   </ul>   
                     <a class='menu-trigger'>
@@ -93,14 +96,9 @@ https://templatemo.com/tm-591-villa-agency
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <div class="page-heading header-text">
+  <div class="page-heading header-text" id="page-heading" style="background-image: url('assets/images/PIPES-BANNERS-LEFT-scaled.jpg');">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <span class="breadcrumb"><a href="#">Home</a> / Properties</span>
-          <h3>Properties</h3>
-        </div>
-      </div>
+     
     </div>
   </div>
 
@@ -108,16 +106,19 @@ https://templatemo.com/tm-591-villa-agency
     <div class="container">
       <ul class="properties-filter">
         <li>
-          <a class="is_active" href="#!" data-filter="*">Show All</a>
+          <a class="is_active" href="#!" data-filter=".pipes">Pipes</a>
         </li>
         <li>
-          <a href="#!" data-filter=".adv">Apartment</a>
+          <a href="#!" data-filter=".fittings">Fittings</a>
         </li>
         <li>
-          <a href="#!" data-filter=".str">Villa House</a>
+          <a href="#!" data-filter=".jaz-roof">Jaz Roof</a>
         </li>
         <li>
-          <a href="#!" data-filter=".rac">Penthouse</a>
+          <a href="#!" data-filter=".pvc-granules">PVC Granules</a>
+        </li>
+        <li>
+          <a href="#!" data-filter=".green-fence">Green Fence</a>
         </li>
       </ul>
       <div class="row properties-box">
@@ -299,10 +300,8 @@ https://templatemo.com/tm-591-villa-agency
 
   <footer>
     <div class="container">
-      <div class="col-lg-12">
-        <p>Copyright © 2048 Villa Agency Co., Ltd. All rights reserved. 
-        
-        Design: <a rel="nofollow" href="https://templatemo.com" target="_blank">TemplateMo</a></p>
+      <div class="col-lg-12 text-center">
+        <p style="color: #B1181E; font-weight: bold;">© 2025 Al-Jazera Company For Plastic Ind. All Rights Reserved.</p>
       </div>
     </div>
   </footer>
@@ -315,6 +314,47 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
+
+  <script>
+    // Dynamic banner image change functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const pageHeading = document.getElementById('page-heading');
+      const filterButtons = document.querySelectorAll('.properties-filter a');
+      
+      // Banner images mapping
+      const bannerImages = {
+        '.pipes': 'assets/images/PIPES-BANNERS-LEFT-scaled.jpg',
+        '.fittings': 'assets/images/FITTINGS-BANNERS-LEFT-scaled.jpg',
+        '.jaz-roof': 'assets/images/JAZ-ROOF-BANNER-LARGE-scaled.jpg',
+        '.pvc-granules': 'assets/images/granule-teraplast-1_cleanup-overlyed.png',
+        '.green-fence': 'assets/images/JGF-BANNERS-2.jpg'
+      };
+      
+      // Add click event listeners to filter buttons
+      filterButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('is_active'));
+          
+          // Add active class to clicked button
+          this.classList.add('is_active');
+          
+          // Get the filter value
+          const filterValue = this.getAttribute('data-filter');
+          
+          // Change banner image if mapping exists
+          if (bannerImages[filterValue]) {
+            pageHeading.style.backgroundImage = `url('${bannerImages[filterValue]}')`;
+            
+            // Add smooth transition effect
+            pageHeading.style.transition = 'background-image 0.5s ease-in-out';
+          }
+        });
+      });
+    });
+  </script>
 
   </body>
 </html>
