@@ -995,7 +995,13 @@ https://templatemo.com/tm-591-villa-agency
                 // Add active class to clicked link
                 this.classList.add('active');
                 
-
+                // Close mobile menu if open (only on mobile devices)
+                const menuTrigger = document.querySelector('.menu-trigger');
+                const nav = document.querySelector('.header-area .nav');
+                if (menuTrigger && nav && window.innerWidth <= 991) {
+                  $(menuTrigger).removeClass('active');
+                  $(nav).slideUp(200);
+                }
                 
                 // Smooth scroll to target section
                 targetSection.scrollIntoView({
