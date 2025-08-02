@@ -34,6 +34,124 @@
            padding-bottom: 60px !important;
          }
        }
+
+       /* Animation styles for products page */
+       .fade-in {
+         opacity: 0;
+         transform: translateY(30px);
+         transition: all 0.8s ease-out;
+       }
+       
+       .fade-in.show {
+         opacity: 1;
+         transform: translateY(0);
+       }
+       
+       .slide-in-left {
+         opacity: 0;
+         transform: translateX(-50px);
+         transition: all 0.8s ease-out;
+       }
+       
+       .slide-in-left.show {
+         opacity: 1;
+         transform: translateX(0);
+       }
+       
+       .slide-in-right {
+         opacity: 0;
+         transform: translateX(50px);
+         transition: all 0.8s ease-out;
+       }
+       
+       .slide-in-right.show {
+         opacity: 1;
+         transform: translateX(0);
+       }
+       
+       .scale-in {
+         opacity: 0;
+         transform: scale(0.8);
+         transition: all 0.6s ease-out;
+       }
+       
+       .scale-in.show {
+         opacity: 1;
+         transform: scale(1);
+       }
+       
+       .bounce-in {
+         opacity: 0;
+         transform: scale(0.3);
+         transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+       }
+       
+       .bounce-in.show {
+         opacity: 1;
+         transform: scale(1);
+       }
+       
+       .rotate-in {
+         opacity: 0;
+         transform: rotate(-180deg) scale(0.3);
+         transition: all 0.8s ease-out;
+       }
+       
+       .rotate-in.show {
+         opacity: 1;
+         transform: rotate(0deg) scale(1);
+       }
+       
+       .stagger-delay-1 { transition-delay: 0.1s; }
+       .stagger-delay-2 { transition-delay: 0.2s; }
+       .stagger-delay-3 { transition-delay: 0.3s; }
+       .stagger-delay-4 { transition-delay: 0.4s; }
+       .stagger-delay-5 { transition-delay: 0.5s; }
+       .stagger-delay-6 { transition-delay: 0.6s; }
+       
+       /* Hover animations */
+       .hover-lift {
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+       }
+       
+       .hover-lift:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+       }
+       
+       .hover-glow {
+         transition: all 0.3s ease;
+       }
+       
+       .hover-glow:hover {
+         box-shadow: 0 0 20px rgba(177, 24, 30, 0.3);
+       }
+       
+       /* Banner transition */
+       .banner-transition {
+         transition: background-image 0.8s ease-in-out;
+       }
+       
+       /* Reduce navigation spacing */
+       .nav li {
+         margin: 0 8px !important;
+       }
+       
+       .nav li a {
+         padding: 8px 12px !important;
+         font-size: 14px !important;
+       }
+       
+       @media (max-width: 991px) {
+         .nav li {
+           margin: 0 4px !important;
+         }
+         
+         .nav li a {
+           padding: 6px 8px !important;
+           font-size: 13px !important;
+         }
+       }
      </style>
 <!--
 
@@ -93,13 +211,13 @@ https://templatemo.com/tm-591-villa-agency
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="#about-us">About Us</a></li>
+                      <li><a href="index.html#home">Home</a></li>
+                      <li><a href="index.html#about-us">About Us</a></li>
                       <li><a href="products.html" class="active">Products</a></li>
-                      <li><a href="#downloads">Downloads</a></li>
-                      <li><a href="#certificates">Certificates</a></li>
-                      <li><a href="#sister-companies">Sister Companies</a></li>
-                      <li><a href="#contact-us">Contact Us</a></li>
+                      <li><a href="index.html#downloads">Downloads</a></li>
+                      <li><a href="index.html#certificates">Certificates</a></li>
+                      <li><a href="index.html#sister-companies">Sister Companies</a></li>
+                      <li><a href="index.html#contact-us">Contact Us</a></li>
                       <!--<li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>-->
                   </ul>   
                     <a class='menu-trigger'>
@@ -137,17 +255,17 @@ https://templatemo.com/tm-591-villa-agency
         </li>
       </ul>
              <div class="row properties-box">
-         <!-- Pipes Content -->
-         <div class="col-lg-12 properties-items pipes" style="display: block;">
-           <div class="row">
-             <div class="col-lg-6">
-               <div class="product-image-container">
-                 <img src="assets/images/Products-Pipes.jpg" alt="JASCO Pipes" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-               </div>
-             </div>
-             <div class="col-lg-6">
-               <div class="product-content">
-                 <h2 style="color: #B1181E; margin-bottom: 20px;">Pipes</h2>
+                   <!-- Pipes Content -->
+          <div class="col-lg-12 properties-items pipes" style="display: block;">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="product-image-container slide-in-left hover-lift">
+                  <img src="assets/images/Products-Pipes.jpg" alt="JASCO Pipes" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="product-content slide-in-right">
+                  <h2 style="color: #B1181E; margin-bottom: 20px;" class="fade-in">Pipes</h2>
                  <div class="standards-section" style="margin-bottom: 30px;">
                    <h4 style="color: #333; margin-bottom: 15px;">JASCO Pipes are manufactured according to ASTM Standards:</h4>
                    <ul style="list-style: none; padding-left: 0;">
@@ -179,32 +297,32 @@ https://templatemo.com/tm-591-villa-agency
                  
                  <div class="astm-standards" style="margin-bottom: 30px;">
                    <h4 style="color: #333; margin-bottom: 15px;">ASTM Standards:</h4>
-                   <div class="row">
-                     <div class="col-lg-6">
-                       <div class="standard-item" style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #B1181E;">
-                         <h5 style="color: #B1181E; margin-bottom: 8px;">ASTM D- 1784:</h5>
-                         <p style="margin: 0; font-size: 14px;">This specification covers Rigid PVC compound used for pipe extrusion.</p>
-                       </div>
-                     </div>
-                     <div class="col-lg-6">
-                       <div class="standard-item" style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #B1181E;">
-                         <h5 style="color: #B1181E; margin-bottom: 8px;">ASTM D- 1785:</h5>
-                         <p style="margin: 0; font-size: 14px;">It covers the UPVC pipe requirements and test methods for schedule 40 and schedule 80.</p>
-                       </div>
-                     </div>
-                     <div class="col-lg-6">
-                       <div class="standard-item" style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #B1181E;">
-                         <h5 style="color: #B1181E; margin-bottom: 8px;">ASTM F-441:</h5>
-                         <p style="margin: 0; font-size: 14px;">It covers schedule 80 CPVC pressure pipes.</p>
-                       </div>
-                     </div>
-                     <div class="col-lg-6">
-                       <div class="standard-item" style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #B1181E;">
-                         <h5 style="color: #B1181E; margin-bottom: 8px;">ASTM D- 2665:</h5>
-                         <p style="margin: 0; font-size: 14px;">It covers schedule 40 DWV-UPVC pipes.</p>
-                       </div>
-                     </div>
-                   </div>
+                                       <div class="row">
+                      <div class="col-lg-6">
+                        <div class="standard-item scale-in hover-glow stagger-delay-1" style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #B1181E;">
+                          <h5 style="color: #B1181E; margin-bottom: 8px;">ASTM D- 1784:</h5>
+                          <p style="margin: 0; font-size: 14px;">This specification covers Rigid PVC compound used for pipe extrusion.</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="standard-item scale-in hover-glow stagger-delay-2" style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #B1181E;">
+                          <h5 style="color: #B1181E; margin-bottom: 8px;">ASTM D- 1785:</h5>
+                          <p style="margin: 0; font-size: 14px;">It covers the UPVC pipe requirements and test methods for schedule 40 and schedule 80.</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="standard-item scale-in hover-glow stagger-delay-3" style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #B1181E;">
+                          <h5 style="color: #B1181E; margin-bottom: 8px;">ASTM F-441:</h5>
+                          <p style="margin: 0; font-size: 14px;">It covers schedule 80 CPVC pressure pipes.</p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="standard-item scale-in hover-glow stagger-delay-4" style="margin-bottom: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #B1181E;">
+                          <h5 style="color: #B1181E; margin-bottom: 8px;">ASTM D- 2665:</h5>
+                          <p style="margin: 0; font-size: 14px;">It covers schedule 40 DWV-UPVC pipes.</p>
+                        </div>
+                      </div>
+                    </div>
                  </div>
                  
                  <div class="notes-section" style="background: #fff3cd; padding: 20px; border-radius: 10px; border-left: 5px solid #B1181E;">
@@ -223,17 +341,17 @@ https://templatemo.com/tm-591-villa-agency
            </div>
          </div>
          
-                   <!-- Fittings Content -->
-          <div class="col-lg-12 properties-items fittings" style="display: none;">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="product-image-container">
-                  <img src="assets/images/Products-Fittings.jpg" alt="JASCO Fittings" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="product-content">
-                  <h2 style="color: #B1181E; margin-bottom: 20px;">Fittings</h2>
+                             <!-- Fittings Content -->
+           <div class="col-lg-12 properties-items fittings" style="display: none;">
+             <div class="row">
+               <div class="col-lg-6">
+                 <div class="product-image-container slide-in-left hover-lift">
+                   <img src="assets/images/Products-Fittings.jpg" alt="JASCO Fittings" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                 </div>
+               </div>
+               <div class="col-lg-6">
+                 <div class="product-content slide-in-right">
+                   <h2 style="color: #B1181E; margin-bottom: 20px;" class="fade-in">Fittings</h2>
                   <div class="standards-section" style="margin-bottom: 30px;">
                     <h4 style="color: #333; margin-bottom: 15px;">JASCO Fittings are manufactured according to ASTM Standards:</h4>
                     <ul style="list-style: none; padding-left: 0;">
@@ -293,17 +411,17 @@ https://templatemo.com/tm-591-villa-agency
             </div>
           </div>
          
-                   <!-- Jaz Roof Content -->
-          <div class="col-lg-12 properties-items jaz-roof" style="display: none;">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="product-image-container">
-                  <img src="assets/images/JAZ-ROOF.jpg" alt="JAZ ROOF PVC Corrugated Sheet" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="product-content">
-                  <h2 style="color: #B1181E; margin-bottom: 20px;">Jaz Roof PVC Corrugated Sheet</h2>
+                             <!-- Jaz Roof Content -->
+           <div class="col-lg-12 properties-items jaz-roof" style="display: none;">
+             <div class="row">
+               <div class="col-lg-6">
+                 <div class="product-image-container slide-in-left hover-lift">
+                   <img src="assets/images/JAZ-ROOF.jpg" alt="JAZ ROOF PVC Corrugated Sheet" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                 </div>
+               </div>
+               <div class="col-lg-6">
+                 <div class="product-content slide-in-right">
+                   <h2 style="color: #B1181E; margin-bottom: 20px;" class="fade-in">Jaz Roof PVC Corrugated Sheet</h2>
                   <p style="line-height: 1.8; margin-bottom: 20px;">
                     <strong style="color: #B1181E;">JAZ ROOF PVC Corrugated Sheet</strong> is our latest innovation in industry which is light in weight, flexible, and impermeable thus reducing remarkably on the structural cost. Their unique resistance to weather makes our colors sheets the ideal material for decorative and tough roofing and wall applications. Today, PVC sheets started to replace the steel corrugated sheets that have their disadvantages like corrosion and high maintenance cost.
                   </p>
@@ -506,17 +624,17 @@ https://templatemo.com/tm-591-villa-agency
             </div>
           </div>
          
-                   <!-- PVC Granules Content -->
-          <div class="col-lg-12 properties-items pvc-granules" style="display: none;">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="product-image-container">
-                  <img src="assets/images/Products-Granules.jpg" alt="JASCO PVC Granules" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="product-content">
-                  <h2 style="color: #B1181E; margin-bottom: 20px;">PVC Granules</h2>
+                             <!-- PVC Granules Content -->
+           <div class="col-lg-12 properties-items pvc-granules" style="display: none;">
+             <div class="row">
+               <div class="col-lg-6">
+                 <div class="product-image-container slide-in-left hover-lift">
+                   <img src="assets/images/Products-Granules.jpg" alt="JASCO PVC Granules" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                 </div>
+               </div>
+               <div class="col-lg-6">
+                 <div class="product-content slide-in-right">
+                   <h2 style="color: #B1181E; margin-bottom: 20px;" class="fade-in">PVC Granules</h2>
                   <p style="line-height: 1.8; margin-bottom: 20px;">
                     <strong style="color: #B1181E;">JASCO PVC COMPANY</strong> produces premium quality PVC granules. Our PVC granules are used for PVC fittings manufacturing.
                   </p>
@@ -580,17 +698,17 @@ https://templatemo.com/tm-591-villa-agency
             </div>
           </div>
          
-                   <!-- Green Fence Content -->
-          <div class="col-lg-12 properties-items green-fence" style="display: none;">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="product-image-container">
-                  <img src="assets/images/JGF-ROLLS.png" alt="JASCO GREEN FENCE" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
-                </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="product-content">
-                  <h2 style="color: #B1181E; margin-bottom: 20px;">JASCO GREEN FENCE</h2>
+                             <!-- Green Fence Content -->
+           <div class="col-lg-12 properties-items green-fence" style="display: none;">
+             <div class="row">
+               <div class="col-lg-6">
+                 <div class="product-image-container slide-in-left hover-lift">
+                   <img src="assets/images/JGF-ROLLS.png" alt="JASCO GREEN FENCE" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                 </div>
+               </div>
+               <div class="col-lg-6">
+                 <div class="product-content slide-in-right">
+                   <h2 style="color: #B1181E; margin-bottom: 20px;" class="fade-in">JASCO GREEN FENCE</h2>
                   <p style="line-height: 1.8; margin-bottom: 20px;">
                     Now, you can transform the outdoor space of any unit you own (house – garden – office) into a better design by installing the <strong style="color: #B1181E;">JASCO GREEN FENCE</strong>.
                   </p>
@@ -674,14 +792,7 @@ https://templatemo.com/tm-591-villa-agency
           </div>
        </div>
       <div class="row">
-        <div class="col-lg-12">
-          <ul class="pagination">
-            <li><a href="#">1</a></li>
-            <li><a class="is_active" href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">>></a></li>
-          </ul>
-        </div>
+        
       </div>
     </div>
   </div>
@@ -703,64 +814,93 @@ https://templatemo.com/tm-591-villa-agency
   <script src="assets/js/counter.js"></script>
   <script src="assets/js/custom.js"></script>
 
-  <script>
-    // Dynamic banner image change functionality
-    document.addEventListener('DOMContentLoaded', function() {
-      const pageHeading = document.getElementById('page-heading');
-      const filterButtons = document.querySelectorAll('.properties-filter a');
-      const productItems = document.querySelectorAll('.properties-items');
-      
-      // Banner images mapping
-      const bannerImages = {
-        '.pipes': 'assets/images/PIPES-BANNERS-LEFT-scaled.jpg',
-        '.fittings': 'assets/images/FITTINGS-BANNERS-LEFT-scaled.jpg',
-        '.jaz-roof': 'assets/images/JAZ-ROOF-BANNER-LARGE-scaled.jpg',
-        '.pvc-granules': 'assets/images/granule-teraplast-1_cleanup-overlyed.png',
-        '.green-fence': 'assets/images/JGF-BANNERS-2.jpg'
-      };
-      
-      // Add click event listeners to filter buttons
-      filterButtons.forEach(button => {
-        button.addEventListener('click', function(e) {
-          e.preventDefault();
-          
-          // Remove active class from all buttons
-          filterButtons.forEach(btn => btn.classList.remove('is_active'));
-          
-          // Add active class to clicked button
-          this.classList.add('is_active');
-          
-          // Get the filter value
-          const filterValue = this.getAttribute('data-filter');
-          
-          // Hide all product items
-          productItems.forEach(item => {
-            item.style.display = 'none';
-          });
-          
-          // Show the selected product item
-          const selectedItem = document.querySelector(`.properties-items${filterValue}`);
-          if (selectedItem) {
-            selectedItem.style.display = 'block';
-          }
-          
-                                           // Change banner image if mapping exists
-            if (bannerImages[filterValue]) {
-              pageHeading.style.backgroundImage = `url('${bannerImages[filterValue]}')`;
-              pageHeading.style.backgroundSize = 'cover';
-              pageHeading.style.backgroundPosition = 'center';
-              pageHeading.style.backgroundRepeat = 'no-repeat';
-              pageHeading.style.width = '100%';
-              pageHeading.style.maxWidth = '100%';
-              pageHeading.style.overflow = 'hidden';
-              
-              // Add smooth transition effect
-              pageHeading.style.transition = 'background-image 0.5s ease-in-out';
-            }
-        });
-      });
-    });
-  </script>
+     <script>
+     // Dynamic banner image change functionality
+     document.addEventListener('DOMContentLoaded', function() {
+       const pageHeading = document.getElementById('page-heading');
+       const filterButtons = document.querySelectorAll('.properties-filter a');
+       const productItems = document.querySelectorAll('.properties-items');
+       
+       // Banner images mapping
+       const bannerImages = {
+         '.pipes': 'assets/images/PIPES-BANNERS-LEFT-scaled.jpg',
+         '.fittings': 'assets/images/FITTINGS-BANNERS-LEFT-scaled.jpg',
+         '.jaz-roof': 'assets/images/JAZ-ROOF-BANNER-LARGE-scaled.jpg',
+         '.pvc-granules': 'assets/images/granule-teraplast-1_cleanup-overlyed.png',
+         '.green-fence': 'assets/images/JGF-BANNERS-2.jpg'
+       };
+       
+       // Function to trigger animations
+       function triggerAnimations(container) {
+         const animatedElements = container.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .bounce-in, .rotate-in');
+         
+         animatedElements.forEach((element, index) => {
+           setTimeout(() => {
+             element.classList.add('show');
+           }, index * 100); // Stagger the animations
+         });
+       }
+       
+       // Add click event listeners to filter buttons
+       filterButtons.forEach(button => {
+         button.addEventListener('click', function(e) {
+           e.preventDefault();
+           
+           // Remove active class from all buttons
+           filterButtons.forEach(btn => btn.classList.remove('is_active'));
+           
+           // Add active class to clicked button
+           this.classList.add('is_active');
+           
+           // Get the filter value
+           const filterValue = this.getAttribute('data-filter');
+           
+           // Hide all product items and reset animations
+           productItems.forEach(item => {
+             item.style.display = 'none';
+             // Reset animations
+             const animatedElements = item.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in, .bounce-in, .rotate-in');
+             animatedElements.forEach(element => {
+               element.classList.remove('show');
+             });
+           });
+           
+           // Show the selected product item
+           const selectedItem = document.querySelector(`.properties-items${filterValue}`);
+           if (selectedItem) {
+             selectedItem.style.display = 'block';
+             
+             // Trigger animations after a short delay
+             setTimeout(() => {
+               triggerAnimations(selectedItem);
+             }, 100);
+           }
+           
+           // Change banner image if mapping exists
+           if (bannerImages[filterValue]) {
+             pageHeading.style.backgroundImage = `url('${bannerImages[filterValue]}')`;
+             pageHeading.style.backgroundSize = 'cover';
+             pageHeading.style.backgroundPosition = 'center';
+             pageHeading.style.backgroundRepeat = 'no-repeat';
+             pageHeading.style.width = '100%';
+             pageHeading.style.maxWidth = '100%';
+             pageHeading.style.overflow = 'hidden';
+             
+             // Add smooth transition effect
+             pageHeading.style.transition = 'background-image 0.8s ease-in-out';
+           }
+         });
+       });
+       
+       // Trigger initial animations for pipes (default view)
+       setTimeout(() => {
+         const pipesSection = document.querySelector('.properties-items.pipes');
+         if (pipesSection) {
+           triggerAnimations(pipesSection);
+         }
+       }, 500);
+     });
+   </script>
 
   </body>
 </html>
