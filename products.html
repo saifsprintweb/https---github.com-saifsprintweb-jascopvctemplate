@@ -16,8 +16,25 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-villa-agency.css">
     <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+         <link rel="stylesheet" href="assets/css/animate.css">
+     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+     
+     <style>
+       /* Mobile responsive styles for banner image */
+       @media (max-width: 768px) {
+         #page-heading {
+           padding-top: 80px !important;
+           padding-bottom: 80px !important;
+         }
+       }
+       
+       @media (max-width: 480px) {
+         #page-heading {
+           padding-top: 60px !important;
+           padding-bottom: 60px !important;
+         }
+       }
+     </style>
 <!--
 
 TemplateMo 591 villa agency
@@ -96,7 +113,7 @@ https://templatemo.com/tm-591-villa-agency
   </header>
   <!-- ***** Header Area End ***** -->
 
-         <div class="page-heading header-text" id="page-heading" style="background-image: url('assets/images/PIPES-BANNERS-LEFT-scaled.jpg'); margin-top: 80px; padding-top: 130px; padding-bottom: 130px;">
+                                       <div class="page-heading header-text" id="page-heading" style="background-image: url('assets/images/PIPES-BANNERS-LEFT-scaled.jpg'); background-size: cover; background-position: center; background-repeat: no-repeat; margin-top: 80px; padding-top: 130px; padding-bottom: 130px; width: 100%; max-width: 100%; overflow: hidden;">
 
   </div>
 
@@ -727,13 +744,19 @@ https://templatemo.com/tm-591-villa-agency
             selectedItem.style.display = 'block';
           }
           
-          // Change banner image if mapping exists
-          if (bannerImages[filterValue]) {
-            pageHeading.style.backgroundImage = `url('${bannerImages[filterValue]}')`;
-            
-            // Add smooth transition effect
-            pageHeading.style.transition = 'background-image 0.5s ease-in-out';
-          }
+                                           // Change banner image if mapping exists
+            if (bannerImages[filterValue]) {
+              pageHeading.style.backgroundImage = `url('${bannerImages[filterValue]}')`;
+              pageHeading.style.backgroundSize = 'cover';
+              pageHeading.style.backgroundPosition = 'center';
+              pageHeading.style.backgroundRepeat = 'no-repeat';
+              pageHeading.style.width = '100%';
+              pageHeading.style.maxWidth = '100%';
+              pageHeading.style.overflow = 'hidden';
+              
+              // Add smooth transition effect
+              pageHeading.style.transition = 'background-image 0.5s ease-in-out';
+            }
         });
       });
     });
