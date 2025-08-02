@@ -132,9 +132,107 @@
          transition: background-image 0.8s ease-in-out;
        }
        
+       /* Fix logo positioning - remove left spacing */
+       .header-area .main-nav .logo {
+         margin-left: 0 !important;
+         padding-left: 0 !important;
+         left: 0 !important;
+         position: relative !important;
+       }
+       
+       .header-area .main-nav .logo img {
+         margin-left: 0 !important;
+         padding-left: 0 !important;
+       }
+       
+       /* Override mobile positioning for products page */
+       @media (max-width: 767px) {
+         .header-area .main-nav .logo {
+           left: 0 !important;
+           position: relative !important;
+         }
+       }
+       
+       /* Language Switch Button Styling */
+       .language-switch {
+         margin-left: 20px;
+         display: flex;
+         align-items: center;
+       }
+       
+       .lang-btn {
+         background: linear-gradient(135deg, #B1181E, #8B0000);
+         color: white;
+         border: none;
+         padding: 8px 16px;
+         border-radius: 25px;
+         font-size: 14px;
+         font-weight: 600;
+         cursor: pointer;
+         transition: all 0.3s ease;
+         display: flex;
+         align-items: center;
+         gap: 8px;
+         box-shadow: 0 2px 8px rgba(177, 24, 30, 0.3);
+       }
+       
+       .lang-btn:hover {
+         background: linear-gradient(135deg, #8B0000, #B1181E);
+         transform: translateY(-2px);
+         box-shadow: 0 4px 12px rgba(177, 24, 30, 0.4);
+       }
+       
+       .lang-btn .lang-text {
+         font-family: 'Arial', sans-serif;
+         font-weight: bold;
+       }
+       
+       .lang-btn i {
+         font-size: 12px;
+       }
+       
+       /* RTL Support for Arabic */
+       .rtl {
+         direction: rtl;
+         text-align: right;
+       }
+       
+       .rtl .nav {
+         flex-direction: row-reverse;
+       }
+       
+       .rtl .language-switch {
+         margin-left: 0;
+         margin-right: 20px;
+       }
+       
+       /* Mobile responsive for language button */
+       @media (max-width: 991px) {
+         .language-switch {
+           margin-left: 10px;
+         }
+         
+         .lang-btn {
+           padding: 6px 12px;
+           font-size: 12px;
+         }
+       }
+       
+       @media (max-width: 767px) {
+         .language-switch {
+           margin-left: 5px;
+         }
+         
+         .lang-btn {
+           padding: 5px 10px;
+           font-size: 11px;
+         }
+       }
+       
        /* Reduce navigation spacing */
        .nav li {
          margin: 0 8px !important;
+         padding: 0 !important;
        }
        
        .nav li a {
@@ -145,6 +243,7 @@
        @media (max-width: 991px) {
          .nav li {
            margin: 0 4px !important;
+           padding: 0 !important;
          }
          
          .nav li a {
@@ -200,7 +299,7 @@ https://templatemo.com/tm-591-villa-agency
 
   <!-- ***** Header Area Start ***** -->
   <header class="header-area header-sticky">
-    <div class="container">
+    <div class="container" style="max-width: 100%;">
         <div class="row">
             <div class="col-12">
                 <nav class="main-nav">
@@ -220,6 +319,13 @@ https://templatemo.com/tm-591-villa-agency
                       <li><a href="index.html#contact-us">Contact Us</a></li>
                       <!--<li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>-->
                   </ul>   
+                    <!-- Language Change Button -->
+                    <div class="language-switch" style="margin-bottom: 28px;">
+                      <button id="languageToggle" class="lang-btn" onclick="toggleLanguage()">
+                        <span class="lang-text">العربية</span>
+                        <i class="fa fa-globe"></i>
+                      </button>
+                    </div>
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
@@ -900,6 +1006,12 @@ https://templatemo.com/tm-591-villa-agency
          }
        }, 500);
      });
+     
+           // Language Toggle Functionality
+      function toggleLanguage() {
+        // Show "Coming soon" pop-up message
+        alert('Coming soon');
+      }
    </script>
 
   </body>
