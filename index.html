@@ -22,6 +22,10 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
       .nav-tabs .nav-link {
         transition: all 0.3s ease;
       }
@@ -239,13 +243,13 @@ https://templatemo.com/tm-591-villa-agency
                     <!-- ***** Logo End ***** -->
                     <!-- ***** Menu Start ***** -->
                     <ul class="nav">
-                      <li><a href="index.html" class="active">Home</a></li>
-                      <li><a href="index.html">About Us</a></li>
-                      <li><a href="index.html">Products</a></li>
-                      <li><a href="index.html">Downloads</a></li>
-                      <li><a href="properties.html">Certificates</a></li>
-                      <li><a href="property-details.html">Sister Companies</a></li>
-                      <li><a href="contact.html">Contact Us</a></li>
+                      <li><a href="#home" class="active">Home</a></li>
+                      <li><a href="#about-us">About Us</a></li>
+                      <li><a href="#products-section">Products</a></li>
+                      <li><a href="#downloads">Downloads</a></li>
+                      <li><a href="#certificates">Certificates</a></li>
+                      <li><a href="#sister-companies">Sister Companies</a></li>
+                      <li><a href="#contact-us">Contact Us</a></li>
                       <!--<li><a href="#"><i class="fa fa-calendar"></i> Schedule a visit</a></li>-->
                   </ul>   
                     <a class='menu-trigger'>
@@ -259,7 +263,7 @@ https://templatemo.com/tm-591-villa-agency
   </header>
   <!-- ***** Header Area End ***** -->
 
-  <div class="main-banner">
+  <div class="main-banner" id="home">
     <div class="video-background">
       <video autoplay muted loop playsinline>
         <source src="assets/videos/banner-video.mp4" type="video/mp4">
@@ -277,7 +281,7 @@ https://templatemo.com/tm-591-villa-agency
     </div>
   </div>
 
-  <div class="featured section">
+  <div class="featured section" id="about-us">
     <div class="container">
       <div class="row">
         <div class="col-lg-7">
@@ -624,7 +628,7 @@ https://templatemo.com/tm-591-villa-agency
        </div>
      </div>
 
-      <div class="section best-deal">
+      <div class="section best-deal" id="certificates">
        <div class="container">
          <div class="row">
            <div class="col-lg-12">
@@ -666,7 +670,7 @@ https://templatemo.com/tm-591-villa-agency
      </div>
 
 
-     <div class="section best-deal">
+     <div class="section best-deal" id="sister-companies">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
@@ -716,7 +720,9 @@ https://templatemo.com/tm-591-villa-agency
       </div>
      </div>
 
-  <div class="contact section">
+  
+
+  <div class="contact section" id="contact-us">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 offset-lg-4">
@@ -916,6 +922,58 @@ https://templatemo.com/tm-591-villa-agency
              card.style.opacity = '1';
              card.style.transform = 'translateY(0)';
            }, index * 200 + 500);
+         });
+         
+         // Navigation functionality
+         const navLinks = document.querySelectorAll('.nav a');
+         const sections = document.querySelectorAll('section, [id]');
+         
+                   // Smooth scrolling for navigation links
+          navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+              e.preventDefault();
+              
+              const targetId = this.getAttribute('href').substring(1);
+              const targetSection = document.getElementById(targetId);
+              
+              if (targetSection) {
+                // Remove active class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+                
+                // Add active class to clicked link
+                this.classList.add('active');
+                
+
+                
+                // Smooth scroll to target section
+                targetSection.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            });
+          });
+         
+         // Update active navigation link on scroll
+         window.addEventListener('scroll', function() {
+           let current = '';
+           const scrollPosition = window.scrollY + 100;
+           
+           sections.forEach(section => {
+             const sectionTop = section.offsetTop;
+             const sectionHeight = section.offsetHeight;
+             
+             if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+               current = section.getAttribute('id');
+             }
+           });
+           
+           navLinks.forEach(link => {
+             link.classList.remove('active');
+             if (link.getAttribute('href') === '#' + current) {
+               link.classList.add('active');
+             }
+           });
          });
        });
     </script>
